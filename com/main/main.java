@@ -9,12 +9,12 @@ class main {
         String reg = "\\$(t||s)[0-9]";
         String soma = "add " + reg + "," + reg + "," + reg;
         String sub = "sub " + reg + "," + reg + "," + reg;
-        String sw = "sw " + reg + "," + "[0-10000]" + "(" + reg + ")";
-        String lw = "lw " + reg + "," + "[0-10000]" + "(" + reg + ")";
-        String memory = "memory\\[" + "[0-9]" + "\\]";
+        String sw = "sw " + reg + "," + "[0-9]\\(" + reg + "\\)";
+        String lw = "lw " + reg + "," + "[0-9]\\(" + reg + "\\)";
+        String memory = "memory\\[" + "[0-9]" + "]";
 
         try {
-            File file = new File("arquivo.txt");
+            File file = new File("operacoes.txt");
             Scanner sc = new Scanner(file);
 
             String texto[];
