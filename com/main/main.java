@@ -1,47 +1,20 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package com.main;
 
-import java.util.Scanner;
-import java.io.File;
+import java.io.IOException;
 
-class main {
-    public static void main(String args[]) {
+/**
+ *
+ * @author aluno
+ */
+public class main {
 
-        String reg = "\\$(t||s)[0-9]";
-        String soma = "add " + reg + "," + reg + "," + reg;
-        String sub = "sub " + reg + "," + reg + "," + reg;
-        String sw = "sw " + reg + "," + "[0-9]*\\(" + reg + "\\)";
-        String lw = "lw " + reg + "," + "[0-9]*\\(" + reg + "\\)";
-        String memory = "memory\\[" + "[0-9]" + "]";
+    public static void main(String args[]) throws IOException {
+        String path = "C:/Users/Felipe/Downloads/compiladores/arquivo.txt";
 
-        try {
-            File file = new File("arquivo.txt");
-            Scanner sc = new Scanner(file);
-
-            String texto[];
-
-            while (sc.hasNextLine()) {
-                texto = sc.nextLine().split("\n");
-                for (int i = 0; i < texto.length; i++) {
-                    if (texto[i].matches(soma)) {
-                        System.out.println(texto[i] + " Operação de soma\n");
-                    }
-                    if (texto[i].matches(sub)) {
-                        System.out.println(texto[i] + " Operação de subtração\n");
-                    }
-                    if (texto[i].matches(sw)) {
-                        System.out.println(texto[i] + " Operação SW\n");
-                    }
-                    if (texto[i].matches(lw)) {
-                        System.out.println(texto[i] + " Operação LW\n");
-                    }
-                    if (texto[i].matches(memory)) {
-                        System.out.println(texto[i] + " Operação memory\n");
-                    }
-                }
-            }
-
-        } catch (Exception e) {
-            System.out.println("Erro: " + e.getMessage());
-        }
+        Arquivos.ler(path);
     }
 }
