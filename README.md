@@ -1,19 +1,13 @@
-# Exercício Compiladores - Identificador de instruções MIPS
+# MIPS Instruction Identifier
 
-<h3>Implemente um programa em Java para reconhecer cada uma das seguintes instruções add, lw, memory, subtract, load word, store word.</h3>
+## Implement a Java program to recognize each of the following instructions: `add`, `lw`, `memory`, `subtract`, `load word`, `store word`.
 
-Exemplo de Código:
+### Example Code:
 
-memory[0]
-
-add $t1,$s4,$s4
-
-add $t1,$t1,$t1
-
-sub  $t1,$t1,$s3
-
-lw $t0,0($t1)
-
-add $s1,$s2,$t0
-
-sw $t0,1200($t1)
+- `memory[0]`
+- `add $t1,$s4,$s4`
+- `add $t1,$t1,$t1`
+- `sub $t1,$t1,$s3`
+- `lw $t0,0($t1)`
+- `add $s1,$s2,$t0`
+- `sw $t0,1200($t1)`
